@@ -19,7 +19,7 @@ public class PersonService {
     }
 
     @PostMapping
-    public MessageResponseDTO createPerson(@RequestBody Person person) {
+    public MessageResponseDTO createPerson(Person person) {
         Person savedPerson = personRepository.save(person);
         return MessageResponseDTO
                     .builder()
